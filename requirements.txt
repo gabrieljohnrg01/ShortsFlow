@@ -1,0 +1,18 @@
+moviepy
+google-genai
+requests
+whisper-timestamped
+moviepy
+google-genai
+requests
+whisper-timestamped
+edge-tts
+google-api-python-client
+google-auth-oauthlib
+google-auth-httplib2
+beautifulsoup4
+lxml
+ddgs
+r e s e m b l e  
+schedule
+pytz

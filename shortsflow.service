@@ -1,0 +1,26 @@
+[Unit]
+Description=ShortsFlow Background Scheduler
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+# IMPORTANT: Change these placeholders to match your actual Ubuntu setup!
+# For example, if your username is "johndoe", change User=johndoe
+User=YOUR_UBUNTU_USERNAME
+
+# Set this to the absolute path where your project folder lives
+WorkingDirectory=/path/to/your/ShortsFlow
+
+# Set this to the absolute path of your Python executable and the scheduler script
+# You can find your python path by running `which python3` in the terminal
+ExecStart=/usr/bin/python3 /path/to/your/ShortsFlow/scheduler.py
+
+# Automatically restart the script if it crashes
+Restart=always
+RestartSec=10
+
+# Environment variables to ensure Python output is captured in the logs
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
